@@ -1,10 +1,12 @@
 <template>
 	<div id="app">
-		<div class="color-liner"></div>
-		<ul class="nav container ">
-			<li><router-link to="/">主页</router-link></li>
-			<li><router-link to="/about">关于我们</router-link></li>
-		</ul>
+		<div class="nav">
+			<div class="color-liner"></div>
+			<ul class="container ">
+				<li><router-link to="/">主页</router-link></li>
+				<li><router-link to="/about">关于我们</router-link></li>
+			</ul>
+		</div>
 		<router-view></router-view>
 	</div>
 </template>
@@ -16,6 +18,10 @@ export default {
 </script>
 
 <style>
+body,html{
+	margin: 0;
+	padding: 0;	
+}
 @keyframes bgSize{
 	0% {
 		background-size : 300% 100%;
