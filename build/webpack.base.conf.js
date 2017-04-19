@@ -72,6 +72,7 @@ module.exports = {
       {
         test : /\.css$/,
         use  : ExtractTextPlugin.extract({
+			fallback: "style-loader",
 			use : 'css-loader'
         })
       }
@@ -81,6 +82,7 @@ module.exports = {
 	  new webpack.ProvidePlugin({
 		  $ : "jquery",
 		  jQuery : "jquery"
-	  })
+	  }),
+	  new ExtractTextPlugin("main.css")
   ]
 }

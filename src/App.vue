@@ -1,8 +1,8 @@
 <template>
 	<div id="app">
-		<div class="nav">
+		<div class="nav container">
 			<div class="color-liner"></div>
-			<ul class="container ">
+			<ul >
 				<li><router-link to="/">主页</router-link></li>
 				<li><router-link to="/about">关于我们</router-link></li>
 			</ul>
@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style>
+
+@import "./assets/main.css";
 body,html{
 	margin: 0;
 	padding: 0;	
