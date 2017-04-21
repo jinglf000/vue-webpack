@@ -1,22 +1,66 @@
 <template>
 	<div id="app">
-		<div class="nav container">
-			<div class="color-liner"></div>
-			<ul >
-				<li><router-link to="/">主页</router-link></li>
-				<li><router-link to="/about">关于我们</router-link></li>
-			</ul>
-		</div>
+		<div class="top-color-liner"></div>
+		<div class="container-fluid ">	
+			<div class="site-topbar">
+				<div class="topbar-nav-left clear_float">
+					<router-link to="/home" class="top-home icon">贵阳人力资源网</router-link>
+					<router-link to="/enterprise" class="top-enterprise icon">进入企业版</router-link>
+				</div>
+				<div class="topbar-card-right clear_float">
+					<router-link to="/person" class="top-person icon">Mrs Zhang</router-link>
+					<router-link to="/mobile" class="top-mobile icon">手机贵阳</router-link>
+				</div>
+			</div>
+		</div> 
+		
 		<router-view></router-view>
 	</div>
 </template>
 
 <script>
+
 export default {
-	name : 'app'
+  name: 'app'
 }
+
 </script>
 
-<style>
-	
+<style >
+	@import "./assets/main.css";
+	.site-topbar{
+		background-color: #333;
+		height: 40px;
+		line-height: 40px;
+		color: #ccc;
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.site-topbar a{
+		color: #ccc;
+		padding: 5px 20px;
+	}
+	.site-topbar a:hover{
+		color: #ccc;
+		text-decoration: none;
+	}
+	.topbar-nav-left{
+		float: left;
+	}
+	.topbar-card-right{
+		float: right;
+	}
+	.top-home:before{
+		content: '\e608';
+	}
+	.top-enterprise:before{
+		content: '\e724';
+	}
+	.top-person:before{
+		content: '\e7c1';
+	}
+	.top-mobile:before{
+		content: '\e601';
+	}
+	/*.top_*/
 </style>

@@ -1,16 +1,33 @@
 /*
- * css file
- * @author jinglf
- * 
+ * 一些公用的css
+ * @authot jinglf
  */
- /* common 全局使用 */
- @font-face {
-	font-family: 'iconfont';  /* project id 281827 */
-	src: url('//at.alicdn.com/t/font_kf6af883uttbuik9.eot');
-	src: url('//at.alicdn.com/t/font_kf6af883uttbuik9.eot?#iefix') format('embedded-opentype'),
-	url('//at.alicdn.com/t/font_kf6af883uttbuik9.woff') format('woff'),
-	url('//at.alicdn.com/t/font_kf6af883uttbuik9.ttf') format('truetype'),
-	url('//at.alicdn.com/t/font_kf6af883uttbuik9.svg#iconfont') format('svg');
+@font-face {
+    font-family: 'iconfont';  /* project id 281827 */
+    src: url('//at.alicdn.com/t/font_oh39g2kox39pb9.eot');
+    src: url('//at.alicdn.com/t/font_oh39g2kox39pb9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_oh39g2kox39pb9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_oh39g2kox39pb9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_oh39g2kox39pb9.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline;
+}
+.icon:after,
+.icon:before{
+    font-family: "iconfont";
+    padding-right: 10px;
+    font-size: 16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
 }
 @keyframes bgSize{
 	0% {
@@ -24,12 +41,17 @@
 *{
 	margin: 0;
     padding: 0;
-	font-family: 'Avenir', Helvetica, Arial, sans-serif ,"Microsoft YaHei";
+	font-family: 'Avenir', Helvetica, Arial, sans-serif ,"Microsoft YaHei","iconfont";
  }
-body,html{
-    background-color: #fbfbfb;
+ul,li{
+    list-style: none;
 }
-.color-liner{
+.clear_float:after{
+    content : "";
+    display: block;
+    clear: both;
+}
+.top-color-liner{
 	height : 3px;
 	width : 100%;
 	background : linear-gradient(45deg,#ffc700 0%,#e91e1e 33%,#6f27b0 66%,#00ff88 100%);
