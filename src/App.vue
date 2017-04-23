@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<div class="top-color-liner"></div>
-		<div class="container-fluid ">	
+		<div class="container-fluid site-topbar-container">	
 			<div class="site-topbar">
 				<div class="topbar-nav-left clear_float">
 					<router-link to="/home" class="top-home icon">贵阳人力资源网</router-link>
@@ -13,8 +13,9 @@
 				</div>
 			</div>
 		</div> 
-		
-		<router-view></router-view>
+		<transition name="slide">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
@@ -28,8 +29,10 @@ export default {
 
 <style >
 	@import "./assets/main.css";
-	.site-topbar{
+	.site-topbar-container{
 		background-color: #333;
+	}	
+	.site-topbar{
 		height: 40px;
 		line-height: 40px;
 		color: #ccc;

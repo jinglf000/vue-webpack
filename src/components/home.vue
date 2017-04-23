@@ -6,12 +6,12 @@
 
 <script>
 export default {
-    name:   'home',
-    data() {
-        return {
-            title : '临时的home页面'
-        }
+  name: 'home',
+  data () {
+    return {
+      title: '临时的home页面'
     }
+  }
 }
 
 </script>
