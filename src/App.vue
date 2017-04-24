@@ -8,7 +8,9 @@
 					<router-link to="/enterprise" class="top-enterprise icon">进入企业版</router-link>
 				</div>
 				<div class="topbar-card-right clear_float">
-					<router-link to="/person" class="top-person icon">Mrs Zhang</router-link>
+					<!-- exact 路由匹配的类的样式 精确模式，只匹配当前路由 -->
+					<router-link to="/person" class="top-person icon" exact>Mrs Zhang</router-link>
+					<i class="iconfont">&#xe94b;</i>
 					<router-link to="/mobile" class="top-mobile icon">手机贵阳</router-link>
 				</div>
 			</div>
@@ -16,6 +18,10 @@
 		<transition name="slide">
 			<router-view></router-view>
 		</transition>
+		<footer class="container-fluid foot-container">
+			<h4>遵循 MIT 开源协议</h4>
+			<p>Copyright ©2016-2017 jinglf</p>
+		</footer>
 	</div>
 </template>
 
@@ -63,5 +69,10 @@ export default {
 	.top-mobile:before{
 		content: '\e601';
 	}
-	/*.top_*/
+	.foot-container{
+		text-align: center;
+		font-size: 12px;
+		background-color: #333;
+		color: #fff;
+	}
 </style>

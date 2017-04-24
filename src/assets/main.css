@@ -43,7 +43,7 @@
 *{
 	margin: 0;
     padding: 0;
-	font-family: 'Avenir', Helvetica, Arial, sans-serif ,"Microsoft YaHei","iconfont";
+	font-family: "Microsoft YaHei", 'Avenir', Helvetica, Arial, sans-serif ,"iconfont";
  }
 ul,li{
     list-style: none;
@@ -59,6 +59,9 @@ body{
 .main-width{
     width: 1200px;
     margin: 0 auto;
+}
+a:active{
+    color: #fff;
 }
 /* vue 切换效果------滑动效果 */
 .slide-enter,
@@ -78,4 +81,13 @@ body{
 	background : linear-gradient(45deg,#ffc700 0%,#e91e1e 33%,#6f27b0 66%,#00ff88 100%);
 	background-position : 100% 0;
 	animation: bgSize 5s infinite ease-in-out alternate;
+}
+/* vue router active 激活状态*/
+.router-link-active{
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;  
+}
+.router-link-active:hover{
+    color: #fff;
 }
