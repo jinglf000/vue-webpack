@@ -2,7 +2,7 @@
 	<div id="app">
 		<div class="top-color-liner"></div>
 		<div class="container-fluid site-topbar-container">	
-			<div class="site-topbar">
+			<div class="site-topbar main-width">
 				<div class="topbar-nav-left clear_float">
 					<router-link to="/home" class="top-home icon">贵阳人力资源网</router-link>
 					<router-link to="/enterprise" class="top-enterprise icon">进入企业版</router-link>
@@ -31,13 +31,11 @@ export default {
 	@import "./assets/main.css";
 	.site-topbar-container{
 		background-color: #333;
-	}	
+	}
 	.site-topbar{
 		height: 40px;
 		line-height: 40px;
 		color: #ccc;
-		width: 1200px;
-		margin: 0 auto;
 	}
 	.site-topbar a{
 		color: #ccc;

@@ -1,7 +1,8 @@
 <template>
 <div id="person">
     <header class="container-fluid top-nav">
-        <nav>
+        <nav class="main-width">
+            <router-link to="/person">个人中心</router-link>
             <router-link to="/person/resume">我的简历</router-link>
             <router-link to="/person/profile">账户管理</router-link>
         </nav>
@@ -21,6 +22,15 @@ export default {
 </script>
 
 <style>
-
+.top-nav{
+    height: 80px;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+}
+.top-nav a{
+    padding: 26px 20px;
+    display: inline-block;
+}
 
 </style>

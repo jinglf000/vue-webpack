@@ -1,5 +1,5 @@
 /*
- * 一些公用的css
+ * 自定义的一些公用的css
  * @authot jinglf
  */
  /* 字体图标 */
@@ -53,6 +53,13 @@ ul,li{
     display: block;
     clear: both;
 }
+body{
+    background-color: #f2f2f2;
+}
+.main-width{
+    width: 1200px;
+    margin: 0 auto;
+}
 /* vue 切换效果------滑动效果 */
 .slide-enter,
 .slice-leave-active{
@@ -65,8 +72,6 @@ ul,li{
 .slide-enter-active{
     transition: all .5s ease;
 }
-
-
 .top-color-liner{
 	height : 3px;
 	width : 100%;
