@@ -5,11 +5,21 @@ import home from '@/components/home'
 import person from '@/person/person'
 import userProfile from '@/person/profile/profile'
 import userResume from '@/person/resume/resume'
-import userResumeEdit from '@/person/resume/edit/edit'
-import userResumeCollection from '@/person/resume/collection/collection'
-import userResumeFollow from '@/person/resume/follow/follow'
-import userResumeStatus from '@/person/resume/status/status'
-import userResumeSubscribe from '@/person/resume/subscribe/subscribe'
+// 简历编辑
+import userResumeEditMain from '@/person/resume/edit/main'
+import userResumeEditright from '@/person/resume/edit/right'
+// 收藏夹
+import userResumeCollectionMain from '@/person/resume/collection/main'
+import userResumeCollectionRight from '@/person/resume/collection/right'
+// 关注盒
+import userResumeFollowMain from '@/person/resume/follow/main'
+import userResumeFollowRight from '@/person/resume/follow/right'
+// 投递箱
+import userResumeStatusMain from '@/person/resume/status/main'
+import userResumeStatusRight from '@/person/resume/status/right'
+// 订阅栏
+import userResumeSubscribeMain from '@/person/resume/subscribe/main'
+import userResumeSubscribeRight from '@/person/resume/subscribe/right'
 
 Vue.use(Router)
 
@@ -33,33 +43,49 @@ export default new Router({
 			children: [
 				{
 					path: 'resume',
+					redirect: { name: 'person-resume-edit' },
 					name: 'person-resume',
 					component: userResume,
 					children: [
 						{
 							path: 'edit',
 							name: 'person-resume-edit',
-							component: userResumeEdit
+							components: {
+								default: userResumeEditMain,
+								'right-container': userResumeEditright
+							}
 						},
 						{
 							path: 'collection',
 							name: 'person-resume-collection',
-							component: userResumeCollection
+							components: {
+								default: userResumeCollectionMain,
+								'right-container': userResumeCollectionRight
+							}
 						},
 						{
 							path: 'follow',
 							name: 'person-resume-follow',
-							component: userResumeFollow
+							components: {
+								default: userResumeFollowMain,
+								'right-container': userResumeFollowRight
+							}
 						},
 						{
 							path: 'status',
 							name: 'person-resume-status',
-							component: userResumeStatus
+							components: {
+								default: userResumeStatusMain,
+								'right-container': userResumeStatusRight
+							}
 						},
 						{
 							path: 'subscribe',
 							name: 'person-resume-subscribe',
-							component: userResumeSubscribe
+							components: {
+								default: userResumeSubscribeMain,
+								'right-container': userResumeSubscribeRight
+							}
 						}
 					]
 				},

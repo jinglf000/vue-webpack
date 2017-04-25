@@ -19,7 +19,7 @@
 			<router-view></router-view>
 		</transition>
 		<footer class="container-fluid foot-container">
-			<h4>遵循 MIT 开源协议</h4>
+			<h4>beta</h4>
 			<p>Copyright ©2016-2017 jinglf</p>
 		</footer>
 	</div>
@@ -72,7 +72,7 @@ export default {
 	.foot-container{
 		text-align: center;
 		font-size: 12px;
-		background-color: #333;
+		background-color: rgb(51, 51, 51);
 		color: #fff;
 	}
 </style>

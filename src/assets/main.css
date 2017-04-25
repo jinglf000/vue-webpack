@@ -60,9 +60,12 @@ body{
     width: 1200px;
     margin: 0 auto;
 }
-a:active{
-    color: #fff;
+a:active,
+a:focus{
+    /*color: #fff;*/
+    text-decoration: none;
 }
+
 /* vue 切换效果------滑动效果 */
 .slide-enter,
 .slice-leave-active{
@@ -83,11 +86,11 @@ a:active{
 	animation: bgSize 5s infinite ease-in-out alternate;
 }
 /* vue router active 激活状态*/
-.router-link-active{
+/*.router-link-active{
     background-color: #337ab7;
     color: #fff;
     text-decoration: none;  
 }
 .router-link-active:hover{
     color: #fff;
-}
+}*/
